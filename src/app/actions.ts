@@ -7,9 +7,7 @@ import { redirect } from "next/navigation";
 import { signIn, signOut } from "@/auth";
 import { createProject, renameProject, type Failure } from "@/server/projects";
 import { getCtx } from "@/server/session";
-import type { ActionState } from "./action-state";
-
-export const TENANT_COOKIE = "tenantdesk.tenant";
+import { TENANT_COOKIE, type ActionState } from "./action-state";
 
 function failureState(f: Failure): ActionState {
   switch (f.error) {

@@ -3,7 +3,8 @@ import { redirect } from "next/navigation";
 import { listProjects } from "@/server/projects";
 import { getCtx } from "@/server/session";
 import { listMyTenants } from "@/server/tenants";
-import { TENANT_COOKIE, logoutAction, selectTenantAction } from "./actions";
+import { TENANT_COOKIE } from "./action-state";
+import { logoutAction, selectTenantAction } from "./actions";
 import { CreateProjectForm, RenameProject } from "./ProjectForms";
 
 export default async function Home() {
